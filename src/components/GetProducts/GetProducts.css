@@ -1,0 +1,81 @@
+body {
+  background-color: #eee;
+}
+
+.container-products {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-products {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-top: 100px;
+}
+
+.row-products {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0px;
+  flex-wrap: wrap;
+}
+
+.card-products {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 10px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  align-items: left;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+  max-width: 200px;
+  max-height: 350px;
+  position: relative;
+}
+
+.card-products:hover {
+  transition: all 0.5s ease;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card-products h2 {
+  position: relative;
+  font-size: 16px;
+}
+
+.card-products h4 {
+  position: relative;
+  font-size: 14px;
+}
+
+.card-products p {
+  position: relative;
+  font-size: 12px;
+}
+
+.card-products img {
+  position: relative;
+  background-size: cover;
+  max-width: 200px;
+  max-height: 300px;
+  margin-top: 50px;
+}
+
+.card-products button{
+    position: relative;
+    top: -50px;
+}

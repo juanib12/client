@@ -1,0 +1,63 @@
+body{
+  background-color: #eee;
+}
+
+
+.color-marcas{
+  background-color: #535353;
+}
+
+.container-marcas {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-marcas {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 150px;
+}
+
+.container-title {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+
+  /* Used to set the position of text */
+  position: relative;
+  margin-top: 140px;
+}
+
+.container___content {
+  /* We won't see the separator line */
+  background: #000;
+  border-radius: 15px;
+  color: #eee;
+  padding: 5px 10px;
+  /* Displayed at the center of container */
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container___content h2{
+  font-size: 18px;
+  top:3px;
+  position: relative;
+}
+
+.container__separator {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  height: 1px;
+  width: 100%;
+}

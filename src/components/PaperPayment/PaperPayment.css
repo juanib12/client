@@ -1,0 +1,58 @@
+.card-paper {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  margin: 10px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+.paper {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-paper {
+  display: flex;
+  position: relative;
+  margin-left: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.circle {
+  border: 1px solid #000;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+
+.circle i {
+  position: relative;
+  top: 3px;
+  color: dodgerblue;
+}
+
+.payment {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.payment h1 {
+  position: relative;
+  top: 5px;
+  font-size: 15px;
+}

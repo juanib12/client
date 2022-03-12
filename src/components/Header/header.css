@@ -1,0 +1,188 @@
+html {
+  box-sizing: content-box;
+}
+
+html * {
+  box-sizing: inherit;
+}
+
+.container-main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 22px;
+  box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+.title {
+  position: relative;
+  right: 100px;
+  font-size: 30px;
+  top: 5px;
+}
+
+header input {
+  outline: none;
+  border: solid 1px #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+  width: 400px;
+}
+
+.container {
+  display: flex;
+
+  /* If you want to place the icon before the text input */
+  flex-direction: row;
+
+  /* Border */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: solid 1px #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+  width: 500px;
+  height: 30px;
+}
+
+.container__input {
+  border-color: transparent;
+  /* Take available width */
+  flex: 1;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.container-log {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  left: 130px;
+}
+
+.link-header-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px 0px 0px 10px;
+  padding: 10px 15px;
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #3498db;
+}
+
+.link-header-register {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px 0px 0px 10px;
+  padding: 10px 15px;
+  background-color: #3498db;
+  border-radius: 7px;
+  color: white;
+}
+
+.link-header-login:hover {
+  transition: all 0.5s ease;
+  color: white;
+  background-color: #3498db;
+}
+
+.link-header-register:hover {
+  transition: all 0.5s ease;
+  border: 1px solid #3498db;
+  color: #3498db;
+  background-color: transparent;
+}
+
+.container-log i {
+  color: #202020;
+  font-size: 35px;
+  margin-left: 20px;
+}
+
+.container-log a {
+  text-decoration: none;
+}
+
+.dropdown {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  left: 70px;
+  cursor: pointer;
+}
+
+.link-header {
+  text-decoration: none;
+  color: #000;
+}
+
+.link-header:hover{
+  color: #505050;
+  text-decoration: none;
+}
+
+.dropdown li {
+  padding: 8px;
+
+  position: relative;
+}
+
+.dropdown ul {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #181818;
+  color: #fff;
+  display: none;
+  border-radius: 5px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  padding: 10px 15px;
+  width: 200px;
+}
+
+.dropdown ul ul {
+  padding: 10px 15px;
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.dropdown li:hover {
+  color: #505050;
+}
+
+.dropdown li:hover > ul {
+  display: block;
+}

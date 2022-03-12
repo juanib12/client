@@ -1,0 +1,64 @@
+body{
+  background-color: #eee;
+}
+
+.container-adic {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  background-color: #fff;
+  height: 500px;
+}
+
+.card-adic {
+  /* Content is centered vertically */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Make all columns have the same width */
+  flex: 1;
+
+  /* OPTIONAL: Space between columns */
+  margin: 0 8px;
+
+  /* OPTIONAL: Border */
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  max-width: 400px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.card-adic-end {
+  /* Content is centered vertically */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Make all columns have the same width */
+  flex: 1;
+
+  /* OPTIONAL: Space between columns */
+  margin: 0 8px;
+
+  /* OPTIONAL: Border */
+  border-radius: 4px;
+  max-width: 400px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.card-adic-end i{
+    color: #3498DB;
+    font-size: 80px;
+}
+
+.card-adic i{
+    color: #3498DB;
+    font-size: 80px;
+}

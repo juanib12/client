@@ -1,0 +1,84 @@
+
+.container-title-categ {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+
+  /* Used to set the position of text */
+  position: relative;
+  margin-top: 100px;
+}
+
+
+.center-categ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  position: relative;
+  margin: 0px 350px 0px 350px;
+}
+
+.row-card-categ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  flex-wrap: wrap;
+}
+
+.card-categ {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin: 10px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.card-categ:hover {
+  transition: all 0.5s ease;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card__cover-categ {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  color: #000;
+}
+
+.card__content-categ {
+  margin-top: -60px;
+  /* Take available height */
+  flex: 1;
+}
+
+
+
+.card__cover-categ i {
+  font-size: 60px;
+}
+
+.card_img-categ {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+}
+
+.card_img-categ img {
+  left: 300px;
+  position: relative;
+  width: 200px;
+}
