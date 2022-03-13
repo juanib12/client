@@ -1,10 +1,12 @@
 import { useCallback, useContext, useEffect, useState } from "react";
-import { UserContext } from "./components/context/UserContext";
-import Loader from "./components/Loader/Loader";
-import Welcome from "./components/Welcome";
-import PageLogin from './components/PageLogin/PageLogin'
+import { Card, Tab, Tabs } from "@blueprintjs/core";
+import Login from "../Login/LoginUser";
+import Register from "../Register/RegisterUser";
+import Welcome from "../Welcome";
+import Loader from "../Loader/Loader";
+import { UserContext } from "../context/UserContext";
 
-function AppNuevo() {
+const PageLogin = () => {
   const [currentTab, setCurrentTab] = useState("login");
   const [userContext, setUserContext] = useContext(UserContext);
 
@@ -53,14 +55,25 @@ function AppNuevo() {
   }, [syncLogout]);
 
   return userContext.token === null ? (
-    <div>
-      <PageLogin />
-    </div>
+    <Card elevation="3" className="main-login">
+      <div className="center">
+        <Tabs
+          id="Tabs"
+          onChange={setCurrentTab}
+          selectedTabId={currentTab}
+          className="tab-login"
+        >
+          <Tab id="login" title="Login" panel={<Login />} />
+          <Tab id="register" title="Register" panel={<Register />} />
+          <Tabs.Expander />
+        </Tabs>
+      </div>
+    </Card>
   ) : userContext.token ? (
     <Welcome />
   ) : (
     <Loader />
   );
-}
+};
 
-export default AppNuevo;
+export default PageLogin;

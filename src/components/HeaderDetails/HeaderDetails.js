@@ -127,18 +127,28 @@ const HeaderDetails = () => {
             <li>Ayuda</li>
           </ul>
 
-          <div className="user-details">
-            <p>
-              &nbsp;
+            <ul className="dropdown-user">
+              <li>
+                  <img
+                    src={userContext.details.avatar}
+                    width="50"
+                    height="50"
+                  />
+                <ul>
+                  <Link className="link-user" to="../myaccount"><li>Mi cuenta</li></Link>
+                  <Link className="link-user" to="../mypurchase"><li>Mis compras</li></Link>
+                  <Link className="link-user" to="../help"><li>Ayuda</li></Link>
+                </ul>
+              </li>
+            </ul>
+            {/* <p>
               <strong>
                 {userContext.details.firstName}
                 {userContext.details.lastName &&
                   " " + userContext.details.lastName}
               </strong>
-              !
             </p>
-            <img src={userContext.details.avatar} width="30" height="30" />
-          </div>
+            <img src={userContext.details.avatar} width="50" height="50" /> */}
           <div className="user-actions">
             <Button onClick={logoutHandler} variant="outlined">
               Salir

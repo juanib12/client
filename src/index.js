@@ -7,8 +7,9 @@ import AddProduct from "./components/AddProduct/AddProduct";
 import GetProducts from "./components/GetProducts/GetProducts";
 import AppNuevo from "./AppNuevo";
 import { UserProvider } from "./components/context/UserContext";
+import PageLogin from "./components/PageLogin/PageLogin";
+import MyAccount from './components/MyAccount/MyAccount'
 import Home from "./components/Home/Home";
-import Welcome from "./components/Welcome";
 
 const rootElement = document.getElementById("root");
 
@@ -17,9 +18,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/login" element={<AppNuevo />} />
+        <Route path="/login" element={<PageLogin/>} />
         <Route path="add_product" element={<AddProduct />} />
         <Route path="get_product" element={<GetProducts />} />
+        <Route path="/myaccount" element={<MyAccount /> } />
       </Routes>
     </BrowserRouter>
   </UserProvider>,
