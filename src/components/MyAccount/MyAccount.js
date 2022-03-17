@@ -4,8 +4,8 @@ import "../Header/header.css";
 import { Link } from "react-router-dom";
 import HeaderDetails from "../HeaderDetails/HeaderDetails";
 import "./MyAccount.css";
-import Home from '../Home/Home'
-import Loader from '../Loader/Loader'
+import Home from "../Home/Home";
+import Loader from "../Loader/Loader";
 
 const MyAccount = () => {
   const [userContext, setUserContext] = useContext(UserContext);
@@ -86,23 +86,17 @@ const MyAccount = () => {
           </div>
 
           <h4>Tarjetas</h4>
-          <div className="paper-account">
-            <h5>Nombre</h5>
-            <p>{userContext.details.firstName}</p>
-          </div>
-          <div className="paper-account2">
-            <h5>Apellido</h5>
-            <p>{userContext.details.lastName}</p>
+          <div className="circle-tarjeta">
+            <h3>+</h3>
           </div>
 
           <h4>Domicilios</h4>
-          <div className="paper-account">
-            <h5>Nombre</h5>
-            <p>{userContext.details.firstName}</p>
+          <div className="circle-tarjeta">
+            <h3>+</h3>
           </div>
           <div className="paper-account2">
-            <h5>Apellido</h5>
-            <p>{userContext.details.lastName}</p>
+            <h5>Domicilio 1</h5>
+            <p>{userContext.details.addres}</p>
           </div>
         </div>
       </div>

@@ -28,8 +28,21 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  left: 140px;
+  left: 110px;
   cursor: pointer;
+}
+
+.dropdown-user i{
+  position: absolute;
+  top: 13px;
+  left: 70px;
+  font-size: 25px;
+}
+
+.dropdown-user h5{
+  font-size: 18px;
+  top: 5px;
+  position: relative;
 }
 
 .dropdown-user li {

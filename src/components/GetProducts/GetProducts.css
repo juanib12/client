@@ -5,7 +5,7 @@ body {
 .container-products {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -17,6 +17,7 @@ body {
   flex-wrap: wrap;
   max-width: 1000px;
   margin-top: 100px;
+  margin-left: 280px;
 }
 
 .row-products {
@@ -24,7 +25,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   top: 0px;
   flex-wrap: wrap;
@@ -43,39 +44,101 @@ body {
   cursor: pointer;
   background-color: #fff;
   max-width: 200px;
-  max-height: 350px;
+  max-height: 450px;
   position: relative;
 }
 
 .card-products:hover {
   transition: all 0.5s ease;
-  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .card-products h2 {
   position: relative;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .card-products h4 {
   position: relative;
-  font-size: 14px;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-top: 25px;
+
+}
+
+.card-products h5{
+  font-size: 13px;
+  top: -15px;
+  margin-bottom: 0px;
+  position: relative;
+  color: #3498db;
 }
 
 .card-products p {
   position: relative;
   font-size: 12px;
+  font-weight: 390;
 }
 
 .card-products img {
   position: relative;
   background-size: cover;
+  object-fit: cover;
   max-width: 200px;
   max-height: 300px;
+  width: 200px;
+  height: 200px;
   margin-top: 50px;
 }
 
-.card-products button{
-    position: relative;
-    top: -50px;
+.card-products button {
+  position: relative;
+  top: -50px;
+}
+
+.container-filter {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 50px;
+  left: 50px;
+}
+
+.card-products-filter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 40px;
+  border-radius: 7px;
+  padding: 10px 15px;
+  align-items: left;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.card-products-filter h5{
+  margin-bottom: 20px;
+}
+
+
+.filters{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.filters p{
+  font-size: 14px;
+  color: #505050;
+}
+
+.filters h6{
+  font-size: 16px;
+  color: #121212;
 }

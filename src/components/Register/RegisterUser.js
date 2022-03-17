@@ -12,6 +12,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState("");
+  const [addres, setAddres] = useState("")
   const [userContext, setUserContext] = useContext(UserContext);
 
   const formSubmitHandler = (e) => {
@@ -31,6 +32,7 @@ const Register = () => {
         username: email,
         password,
         avatar,
+        addres,
       }),
     })
       .then(async (response) => {
@@ -102,6 +104,15 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             className="textfield"
+          />
+        </FormGroup>
+        <FormGroup labelFor="addres">
+          <TextField
+            id="addres"
+            label="Domicilio"
+            className="textfield"
+            onChange={(e) => setAddres(e.target.value)}
+            value={addres}
           />
         </FormGroup>
         <FormGroup labelFor="avatar">

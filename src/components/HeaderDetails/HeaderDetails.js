@@ -6,9 +6,11 @@ import "../Header/header.css";
 import { Formik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
 
+
 const HeaderDetails = () => {
   const [userContext, setUserContext] = useContext(UserContext);
   const [namesProds, setNamesProds] = useState([]);
+
 
   const fetchUserDetails = useCallback(() => {
     fetch(process.env.REACT_APP_API_ENDPOINT + "users/me", {
@@ -99,10 +101,16 @@ const HeaderDetails = () => {
             <li>
               <div>Categorías</div>
               <ul>
-                <li>Remeras</li>
-                <li>Pantalones</li>
+                <Link to="../Remeras" className="link-header-drop">
+                  <li>Remeras</li>
+                </Link>
+                <Link to="../Pantalones" className="link-header-drop">
+                  <li>Pantalones</li>
+                </Link>
                 <li>
-                  <div>Hombre</div>
+                  <Link to="../Hombre" className="link-header-drop">
+                    <div>Hombre</div>
+                  </Link>
                   <ul>
                     <li className="items-header">Remeras</li>
                     <li>Pantalones</li>
@@ -111,7 +119,9 @@ const HeaderDetails = () => {
                   </ul>
                 </li>
                 <li>
-                  <div>Mujer</div>
+                  <Link to="../Mujer" className="link-header-drop">
+                    <div>Mujer</div>
+                  </Link>
                   <ul>
                     <li>Remeras</li>
                     <li>Pantalones</li>
@@ -119,41 +129,50 @@ const HeaderDetails = () => {
                     <li>Zapatillas</li>
                   </ul>
                 </li>
-                <li>Moda Invierno</li>
-                <li>Moda Verano</li>
+                <Link to="../Invierno" className="link-header-drop">
+                  <li>Moda Invierno</li>
+                </Link>
+                <Link to="../Verano" className="link-header-drop">
+                  <li>Moda Verano</li>
+                </Link>
               </ul>
             </li>
             <li>Ofertas</li>
             <li>Ayuda</li>
           </ul>
 
-            <ul className="dropdown-user">
-              <li>
-                  <img
+          <ul className="dropdown-user">
+            <li>
+              {/* <img
                     src={userContext.details.avatar}
                     width="50"
                     height="50"
-                  />
-                <ul>
-                  <Link className="link-user" to="../myaccount"><li>Mi cuenta</li></Link>
-                  <Link className="link-user" to="../mypurchase"><li>Mis compras</li></Link>
-                  <Link className="link-user" to="../help"><li>Ayuda</li></Link>
-                </ul>
-              </li>
-            </ul>
-            {/* <p>
-              <strong>
-                {userContext.details.firstName}
-                {userContext.details.lastName &&
-                  " " + userContext.details.lastName}
-              </strong>
-            </p>
-            <img src={userContext.details.avatar} width="50" height="50" /> */}
+                  /> */}
+              <h5>{userContext.details.firstName}</h5>
+              <i class="bx bxs-chevron-down-square"></i>
+              <ul>
+                <Link className="link-user" to="../myaccount">
+                  <li>Mi cuenta</li>
+                </Link>
+                <Link className="link-user" to="../mypurchase">
+                  <li>Mis compras</li>
+                </Link>
+                <Link className="link-user" to="../help">
+                  <li>Ayuda</li>
+                </Link>
+              </ul>
+            </li>
+          </ul>
           <div className="user-actions">
             <Button onClick={logoutHandler} variant="outlined">
               Salir
             </Button>
             {/* <Button text="Refetch" intent="primary" onClick={refetchHandler} /> */}
+          </div>
+          <div className="carrito">
+            <a href="#">
+              <i class="bx bx-cart-alt"></i>
+            </a>
           </div>
         </div>
       </header>

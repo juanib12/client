@@ -13,6 +13,19 @@ html * {
   margin: 0px 0px 0px 0px;
 }
 
+.carrito a{
+  text-decoration: none;
+  color: #232323;
+  font-size: 30px;
+  right:-180px;
+  top: 5px;
+  position: relative;
+}
+
+.carrito a:hover{
+  color: #121212;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -185,4 +198,14 @@ header input {
 
 .dropdown li:hover > ul {
   display: block;
+}
+
+.link-header-drop{
+  text-decoration: none;
+  color: #fff;
+}
+
+.link-header-drop:hover{
+  text-decoration: none;
+  color: #505050;
 }
