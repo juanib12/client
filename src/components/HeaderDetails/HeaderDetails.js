@@ -6,11 +6,9 @@ import "../Header/header.css";
 import { Formik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
 
-
 const HeaderDetails = () => {
   const [userContext, setUserContext] = useContext(UserContext);
   const [namesProds, setNamesProds] = useState([]);
-
 
   const fetchUserDetails = useCallback(() => {
     fetch(process.env.REACT_APP_API_ENDPOINT + "users/me", {
@@ -143,11 +141,6 @@ const HeaderDetails = () => {
 
           <ul className="dropdown-user">
             <li>
-              {/* <img
-                    src={userContext.details.avatar}
-                    width="50"
-                    height="50"
-                  /> */}
               <h5>{userContext.details.firstName}</h5>
               <i class="bx bxs-chevron-down-square"></i>
               <ul>
@@ -170,9 +163,9 @@ const HeaderDetails = () => {
             {/* <Button text="Refetch" intent="primary" onClick={refetchHandler} /> */}
           </div>
           <div className="carrito">
-            <a href="#">
+            <button class="snipcart-checkout link-carro">
               <i class="bx bx-cart-alt"></i>
-            </a>
+            </button>
           </div>
         </div>
       </header>

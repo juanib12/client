@@ -106,4 +106,47 @@ body {
   color: #505050;
 }
 
+.imagen-404{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
 
+.modal-paypal{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-left: 350px;
+}
+
+.form-paypal{
+  background-color: #121212;
+  width: 700px;
+  padding: 20px 35px;
+  color: white;
+}
+
+
+.container-carro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.link-carro{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: #fff;
+  left: 170px;
+  font-size: 40px;
+  top: 5px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}

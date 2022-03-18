@@ -1,14 +1,21 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Modal } from "@mui/material";
 import { useState, useEffect, useCallback } from "react";
 import { UserContext } from "../context/UserContext";
 import HeaderDetails from "../HeaderDetails/HeaderDetails";
 import Loader from "../Loader/Loader";
 import Welcome from "../Welcome";
-
-
+import { Navigate, useNavigate } from "react-router";
+import { Formik, Form } from "formik";
 const Remeras = () => {
+  const navigate = useNavigate();
   const [getProd, setGetProd] = useState([]);
   const [userContext, setUserContext] = useState(UserContext);
+
+  const [idProd, setIdProds] = useState([]);
+
+  const handleProducto = () => {
+    navigate("../producto", { replace: true });
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -45,6 +52,8 @@ const Remeras = () => {
   useEffect(() => {
     verifyUser();
   }, [verifyUser]);
+
+  console.log(idProd);
 
   return userContext.token === null ? (
     <Welcome />
@@ -102,13 +111,20 @@ const Remeras = () => {
                 <h4>$ {prod.price}</h4>
                 <p>{prod.typeProduct}</p>
                 <h5>Envío gratis</h5>
-                <h2>{prod.name}</h2>
+                <h2 name="nombre">{prod.name}</h2>
                 <p>{prod.description}</p>
                 <p>{prod.shipping}</p>
                 <p>{prod.available}</p>
                 <p>{prod.publish}</p>
-                <Button variant="outlined" type="submit">
-                  Agregar al carrito
+                <Button
+                  variant="contained"
+                  className="snipcart-add-item"
+                  data-item-id={prod._id}
+                  data-item-image={prod.images}
+                  data-item-name={prod.name}
+                  data-item-price={prod.price}
+                >
+                  Añadir al carro
                 </Button>
               </article>
             ))}

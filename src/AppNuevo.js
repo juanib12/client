@@ -3,6 +3,7 @@ import { UserContext } from "./components/context/UserContext";
 import Loader from "./components/Loader/Loader";
 import Welcome from "./components/Welcome";
 import PageLogin from './components/PageLogin/PageLogin'
+import Error from "./components/Error";
 
 function AppNuevo() {
   const [currentTab, setCurrentTab] = useState("login");
@@ -59,7 +60,7 @@ function AppNuevo() {
   ) : userContext.token ? (
     <Welcome />
   ) : (
-    <Loader />
+    <Error />
   );
 }
 

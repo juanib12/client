@@ -20,6 +20,8 @@ import Hombre from "./components/CategoriasProductos/Hombre";
 import Mujer from "./components/CategoriasProductos/Mujer";
 import Invierno from "./components/CategoriasProductos/Invierno";
 import Verano from "./components/CategoriasProductos/Verano";
+import Carro from './components/Carro/Carro'
+import Producto from "./components/Producto";
 
 const rootElement = document.getElementById("root");
 
@@ -42,6 +44,8 @@ ReactDOM.render(
         <Route path="/mujer" element={<Mujer />} />
         <Route path="/invierno" element={<Invierno />} />
         <Route path="/verano" element={<Verano />} />
+        <Route path="/carro" element={<Carro />}/>
+        <Route path="/producto" element={<Producto/>} />
       </Routes>
     </BrowserRouter>
   </UserProvider>,

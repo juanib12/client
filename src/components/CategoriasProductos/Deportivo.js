@@ -108,7 +108,16 @@ const Deportivo = () => {
                 <p>{prod.shipping}</p>
                 <p>{prod.available}</p>
                 <p>{prod.publish}</p>
-                <Button variant="outlined">Agregar al carrito</Button>
+                <Button
+                  variant="contained"
+                  className="snipcart-add-item"
+                  data-item-id={prod._id}
+                  data-item-image={prod.images}
+                  data-item-name={prod.name}
+                  data-item-price={prod.price}
+                >
+                  Añadir al carro
+                </Button>
               </article>
             ))}
           </div>

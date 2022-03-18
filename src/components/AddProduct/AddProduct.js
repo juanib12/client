@@ -3,6 +3,7 @@ import Axios from "axios";
 import { TextField, Button, Input } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import HeaderDetails from "../HeaderDetails/HeaderDetails";
 
 const AddProduct = () => {
   const [name, setName] = useState("");
@@ -10,8 +11,6 @@ const AddProduct = () => {
   const [precio, setPrecio] = useState("");
   const [tipo, setTipo] = useState("");
   const [img, setImg] = useState("");
-
-  const [auth, setAuth] = useState("")
 
   const add_product = () => {
     Axios.post("http://localhost:3002/api/product/article", {
@@ -29,24 +28,53 @@ const AddProduct = () => {
     });
   };
 
-//   useEffect(() => {
-//       const getAuth = async () => {
-//           const response = await fetch("http://localhost:3002/api/users/auth")
-//           const data = await response.json();
-//           setAuth(data.results)
-//       }
-//       getAuth()
-//   }, [])
-
   return (
     <div>
-      <div>
-        <TextField variant="outlined" label="Nombre" onChange={(e) => setName(e.target.value)}/>
-        <TextField variant="outlined" label="Descripcion" onChange={(e) => setDescrip(e.target.value)}/>
-        <TextField variant="outlined" label="Precio" onChange={(e) => setPrecio(e.target.value)}/>
-        <TextField variant="outlined" label="Tipo" onChange={(e) => setTipo(e.target.value)}/>
-        <Input type="text" label="Imagenes" onChange={(e) => setImg(e.target.value)}/>
-        <Button variant="contained" onClick={add_product}>Añadir producto</Button>
+      <HeaderDetails />
+      <div className="container-add">
+        <div className="form-add">
+          <div className="center-add">
+            <TextField
+              variant="outlined"
+              label="Nombre"
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+
+          <div className="center-add">
+            <TextField
+              variant="outlined"
+              label="Descripcion"
+              onChange={(e) => setDescrip(e.target.value)}
+            />
+          </div>
+          <div className="center-add">
+            <TextField
+              variant="outlined"
+              label="Precio"
+              onChange={(e) => setPrecio(e.target.value)}
+            />
+          </div>
+          <div className="center-add">
+            <TextField
+              variant="outlined"
+              label="Tipo"
+              onChange={(e) => setTipo(e.target.value)}
+            />
+          </div>
+          <div className="center-add">
+            <TextField
+              type="text"
+              label="Imagen"
+              onChange={(e) => setImg(e.target.value)}
+            />
+          </div>
+          <div className="center-add">
+            <Button variant="contained" onClick={add_product}>
+              Añadir producto
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import CategoriasHome from "../components/CategoriasHome/CategoriasHome";
 import Adicionales from "../components/Adicionales/Adicionales";
 import Footer from "../components/Footer/Footer";
 import HeaderDetails from "../components/HeaderDetails/HeaderDetails";
+import Error from "./Error";
 
 const Welcome = () => {
   const [userContext, setUserContext] = useContext(UserContext);
