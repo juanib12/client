@@ -13,16 +13,16 @@ html * {
   margin: 0px 0px 0px 0px;
 }
 
-.carrito a{
+.carrito a {
   text-decoration: none;
   color: #232323;
   font-size: 30px;
-  right:-180px;
+  right: -180px;
   top: 5px;
   position: relative;
 }
 
-.carrito a:hover{
+.carrito a:hover {
   color: #121212;
 }
 
@@ -147,8 +147,9 @@ header input {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  left: 70px;
+  left: 50px;
   cursor: pointer;
+  height: 100%;
 }
 
 .link-header {
@@ -156,18 +157,29 @@ header input {
   color: #000;
 }
 
-.link-header:hover{
+.link-header:hover {
   color: #505050;
   text-decoration: none;
 }
 
-.dropdown li {
+.items-nav {
   padding: 8px;
-
+  margin-right: 10px;
+  cursor: pointer;
   position: relative;
 }
 
-.dropdown ul {
+.btn-nav {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+/* .dropdown ul {
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: #181818;
   color: #fff;
@@ -190,22 +202,94 @@ header input {
   left: 100%;
   position: absolute;
   top: 0;
-}
+} */
 
 .dropdown li:hover {
   color: #505050;
 }
-
+/* 
 .dropdown li:hover > ul {
   display: block;
-}
+} */
 
-.link-header-drop{
+.link-header-drop {
   text-decoration: none;
   color: #fff;
 }
 
-.link-header-drop:hover{
+.link-header-drop:hover {
   text-decoration: none;
   color: #505050;
+}
+
+@media screen and (max-width: 500px) {
+  .dropdown {
+    display: none;
+    max-width: 490px;
+  }
+  .items-nav:nth-child(1) {
+    display: none;
+  }
+  .items-nav {
+    display: none;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .title{
+    position: relative;
+    right: 100px;
+  }
+  header input{
+    position: relative;
+    display: none;
+  }
+  .container{
+    display: none;
+  }
+  header{
+    position: relative;
+    width: 100%;
+    width: 510px;
+  }
+  .container-log{
+    position: relative;
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dropdown {
+    display: none;
+    max-width: 320px;
+  }
+  .items-nav:nth-child(1) {
+    display: none;
+  }
+  .items-nav {
+    display: none;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .title{
+    position: relative;
+    right: 50px;
+  }
+  header input{
+    position: relative;
+    display: none;
+  }
+  .container{
+    display: none;
+  }
+  header{
+    position: relative;
+    width: 100%;
+    width: 366px;
+  }
+  .container-log{
+    position: relative;
+    left: -20px;
+  }
 }

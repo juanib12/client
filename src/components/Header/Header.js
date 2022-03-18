@@ -2,11 +2,24 @@ import "./header.css";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
-  const [namesProds, setNamesProds] = useState([])
+  const [namesProds, setNamesProds] = useState([]);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
 
   return (
     <div>
@@ -15,15 +28,21 @@ function Header() {
           <h1 className="title">Shopty</h1>
           <div className="container">
             <Formik
-              initialValues={{name: ""}}
+              initialValues={{ name: "" }}
               onSubmit={async (values) => {
-                const response = await fetch(`http://localhost:3002/api/product/articles_by_name?name=${values.name}`)
+                const response = await fetch(
+                  `http://localhost:3002/api/product/articles_by_name?name=${values.name}`
+                );
                 const data = await response.json();
                 setNamesProds(data.data);
               }}
             >
               <Form>
-                <Field name="name" placeholder="Buscar por nombre..." className="container__input" />
+                <Field
+                  name="name"
+                  placeholder="Buscar por nombre..."
+                  className="container__input"
+                />
               </Form>
             </Formik>
             {/* <!-- Text input --> */}
@@ -37,45 +56,53 @@ function Header() {
             <i class="bx bx-search icon"></i>
           </div>
 
-          <ul class="dropdown">
-              <Link to="/" className="link-header">Inicio</Link>
-              <li>
-                <div>Categorías</div>
-                <ul>
-                  <li>Remeras</li>
-                  <li>Pantalones</li>
-                  <li>
-                    <div>Hombre</div>
-                    <ul>
-                      <li className="items-header">Remeras</li>
-                      <li>Pantalones</li>
-                      <li>Buzos</li>
-                      <li>Zapatillas</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <div>Mujer</div>
-                    <ul>
-                      <li>Remeras</li>
-                      <li>Pantalones</li>
-                      <li>Buzos</li>
-                      <li>Zapatillas</li>
-                    </ul>
-                  </li>
-                  <li>Moda Invierno</li>
-                  <li>Moda Verano</li>
-                </ul>
-              </li>
-              <li>Ofertas</li>
-              <li>Ayuda</li>
-            </ul>
+          <nav>
+            {(toggleMenu || screenWidth > 500) && (
+              <ul class="dropdown">
+                {/* <Link to="/" className="link-header">
+            Inicio
+          </Link> */}
+                <li className="items-nav">
+                  Categorías
+                  {/* <ul>
+              <Link to="../Remeras" className="link-header-drop">
+                <li>Remeras</li>
+              </Link>
+              <Link to="../Pantalones" className="link-header-drop">
+                <li>Pantalones</li>
+              </Link>
+              <Link to="../Hombre" className="link-header-drop">
+                <li>Hombre</li>
+              </Link>
+              <Link to="../Mujer" className="link-header-drop">
+                <li>Mujer</li>
+              </Link>
+              <Link to="../Invierno" className="link-header-drop">
+                <li>Moda Invierno</li>
+              </Link>
+              <Link to="../Verano" className="link-header-drop">
+                <li>Moda Verano</li>
+              </Link>
+            </ul> */}
+                </li>
+                <li className="items-nav">Ofertas</li>
+                <li className="items-nav">Ayuda</li>
+              </ul>
+            )}
+          </nav>
 
           <div className="container-log">
-            <Link className="link-header-login" to="login">Ingresá</Link>
-            <Link className="link-header-register" to="login">Registrate</Link>
-            <a href="#">
-              <i class="bx bx-cart-alt"></i>
-            </a>
+            <Link className="link-header-login" to="login">
+              Ingresá
+            </Link>
+            <Link className="link-header-register" to="login">
+              Registrate
+            </Link>
+          </div>
+          <div className="carrito">
+            <button class="snipcart-checkout link-carro">
+              <i class="bx bxs-shopping-bag"></i>
+            </button>
           </div>
         </div>
       </header>

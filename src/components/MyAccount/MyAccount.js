@@ -6,10 +6,27 @@ import HeaderDetails from "../HeaderDetails/HeaderDetails";
 import "./MyAccount.css";
 import Home from "../Home/Home";
 import Loader from "../Loader/Loader";
+import { Button, Input } from "@mui/material";
 
 const MyAccount = () => {
   const [userContext, setUserContext] = useContext(UserContext);
-  const [namesProds, setNamesProds] = useState([]);
+
+  const [direcc, setDirecc] = useState(false);
+  const [addDirecc, setAddDirecc] = useState(false);
+
+  const [direcc2, setDirecc2] = useState("")
+
+  const handleDirecc = () => {
+    setDirecc(true);
+  };
+
+  const handleAdd_Direcc = () => {
+    setAddDirecc(true)
+    setDirecc2(direcc2)
+    setDirecc(false)
+  }
+
+  console.log(addDirecc)
 
   const fetchUserDetails = useCallback(() => {
     fetch(process.env.REACT_APP_API_ENDPOINT + "users/me", {
@@ -92,12 +109,29 @@ const MyAccount = () => {
 
           <h4>Domicilios</h4>
           <div className="circle-tarjeta">
-            <h3>+</h3>
+            <button className="btn-add" onClick={handleDirecc}>
+              +
+            </button>
           </div>
           <div className="paper-account2">
             <h5>Domicilio 1</h5>
             <p>{userContext.details.addres}</p>
           </div>
+
+          {direcc ===
+            true ? (
+              <div className="paper-account2">
+                <h5>Domicilio 2</h5>
+                <Input onChange={(e) => setDirecc2(e.target.value)}/>
+                <Button variant="outlined" onClick={handleAdd_Direcc}>Añadir</Button>
+              </div>
+            ): null}
+            {addDirecc === true ? (
+                <div className="paper-account2">
+                  <h5>Domicilio 2</h5>
+                  <p>{direcc2}</p>
+                </div>
+            ): null}
         </div>
       </div>
     </div>

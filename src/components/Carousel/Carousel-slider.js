@@ -5,7 +5,7 @@ import "./carousel.css";
 const CarouselSlider = () => {
   return (
     <div>
-      <Carousel>
+      <Carousel className="carousell">
         <Carousel.Item>
           <img
             className="item-img"

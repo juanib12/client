@@ -56,3 +56,9 @@
   top: 5px;
   font-size: 15px;
 }
+
+@media screen and (max-width: 500px){
+  .row-card{
+    display: none;
+  }
+}

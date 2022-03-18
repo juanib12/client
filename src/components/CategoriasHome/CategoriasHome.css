@@ -82,3 +82,26 @@
   position: relative;
   width: 200px;
 }
+
+@media screen and (max-width: 500px){
+  .card-categ{
+    position: relative;
+    right: 100px;
+  }
+}
+
+
+@media screen and (max-width: 320px){
+  .card-categ{
+    position: relative;
+    right: 140px;
+  }
+  .container-title-categ{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 50px;
+  }
+}

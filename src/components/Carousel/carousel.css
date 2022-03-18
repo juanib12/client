@@ -7,3 +7,17 @@
 body{
   background-color: #eee;
 }
+
+@media screen and (max-width: 500px){
+  .carousell{
+    position: relative;
+    width: 555px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .carousell{
+    position: relative;
+    width: 412px;
+  }
+}

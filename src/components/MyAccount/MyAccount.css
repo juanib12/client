@@ -88,6 +88,7 @@
   color: #808080;
 }
 
+
 .circle-tarjeta {
   border-radius: 50%;
   background-color: #3498db;
@@ -109,4 +110,13 @@
 .circle-tarjeta:hover {
   transition: all 0.5s ease;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add{
+  border: none;
+  background-color: transparent;
+  font-size: 36px;
+  color: white;
+  top: -4px;
+  position: relative;
 }

@@ -22,7 +22,7 @@ const CarouselMarcas = () => {
         {/* <!-- Separator line --> */}
         {/* <div class="container__separator"></div> */}
       </div>
-      <Carousel>
+      <Carousel className="carousel2">
         <Carousel.Item>
           <div className="container-marcas">
             <img className="item-marcas" src={Adidas} alt="First slide" />

@@ -12,11 +12,14 @@ const AddProduct = () => {
   const [tipo, setTipo] = useState("");
   const [img, setImg] = useState("");
 
+  const [oferta, setOferta] = useState("");
+
   const add_product = () => {
     Axios.post("http://localhost:3002/api/product/article", {
       name: name,
       description: descrip,
       price: precio,
+      oferta: oferta,
       typeProduct: tipo,
       shipping: true,
       available: true,
@@ -67,6 +70,13 @@ const AddProduct = () => {
               type="text"
               label="Imagen"
               onChange={(e) => setImg(e.target.value)}
+            />
+          </div>
+          <div className="center-add">
+            <TextField
+              label="Oferta"
+              type="text"
+              onChange={(e) => setOferta(e.target.value)}
             />
           </div>
           <div className="center-add">

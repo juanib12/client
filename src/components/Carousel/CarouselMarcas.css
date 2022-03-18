@@ -61,3 +61,25 @@ body{
   height: 1px;
   width: 100%;
 }
+
+@media screen and (max-width: 500px){
+  .carousel2{
+    position: relative;
+    width: 555px;
+  }
+  .color-marcas{
+    width: 555px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .carousel2{
+    position: relative;
+    width: 412px;
+  }
+  .color-marcas{
+    position: relative;
+    top: -50px;
+    width: 412px;
+  }
+}

@@ -63,3 +63,78 @@
   color: #3498db;
   text-decoration: none;
 }
+
+@media screen and (max-width: 500px){
+  .container--footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 490px;
+  }
+  .center-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -150px;
+  }
+  .links-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link-follow{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 150px;
+  }
+  .link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 150px;
+    max-width: 490px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .container--footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+  }
+  .center-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -200px;
+  }
+  .links-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link-follow{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 130px;
+  }
+  .link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 130px;
+  }
+}

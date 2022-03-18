@@ -31,12 +31,12 @@ const Footer = () => {
         <div className="links-footer">
           <div className="link">
             <h6>Sobre Nosotros!</h6>
-            <a href="#">Cómo comprar</a>
-            <a href="#">Glosario de Moda</a>
-            <a href="#">Política de privacidad</a>
-            <a href="#">Plazos de entrega</a>
-            <a href="#">Promociones bancarias</a>
-            <a href="#">Términos y condiciones</a>
+            <Link to="../comprar">Cómo comprar</Link>
+            <Link to="../glosario">Glosario de Moda</Link>
+            <Link to="../politicas">Política de privacidad</Link>
+            <Link to="../entregas">Plazos de entrega</Link>
+            <Link to="../promociones">Promociones bancarias</Link>
+            <Link to="../terminosycondiciones">Términos y condiciones</Link>
 
           </div>
         </div>
@@ -44,11 +44,11 @@ const Footer = () => {
         <div className="links-footer">
           <div className="link">
             <h6>Empresa</h6>
-            <a href="#">Sobre nosotros</a>
-            <a href="#">Atención al cliente</a>
-            <a href="#">Dudas frecuentes</a>
-            <a href="#">Cambios y devoluciones</a>
-            <a href="#">Sea nuestro proveedor</a>
+            <Link to="../about">Sobre nosotros</Link>
+            <Link to="../atencion_cliente">Atención al cliente</Link>
+            <Link to="../aka">Dudas frecuentes</Link>
+            <Link to="../devoluciones">Cambios y devoluciones</Link>
+            <Link to="../proovedores">Sea nuestro proveedor</Link>
             <Link to="../add_product">Vendé con nosotros</Link>
           </div>
         </div>

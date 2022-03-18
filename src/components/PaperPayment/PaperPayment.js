@@ -19,7 +19,6 @@ const PaperPayment = () => {
           </div>
 
           <div className="container-paper">
-            {" "}
             <div className="circle">
               {/* icon */}
               <i class="bx bxs-credit-card"></i>
@@ -31,7 +30,6 @@ const PaperPayment = () => {
           </div>
 
           <div className="container-paper">
-            {" "}
             <div className="circle">
               {/* icon */}
               <i class="bx bx-money"></i>

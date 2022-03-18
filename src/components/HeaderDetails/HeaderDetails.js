@@ -5,10 +5,29 @@ import Loader from "../Loader/Loader";
 import "../Header/header.css";
 import { Formik, Form, Field } from "formik";
 import { Link } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router";
 
 const HeaderDetails = () => {
+  //responsive
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const navigate = useNavigate();
+
   const [userContext, setUserContext] = useContext(UserContext);
   const [namesProds, setNamesProds] = useState([]);
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
 
   const fetchUserDetails = useCallback(() => {
     fetch(process.env.REACT_APP_API_ENDPOINT + "users/me", {
@@ -60,6 +79,7 @@ const HeaderDetails = () => {
       });
       window.localStorage.setItem("logout", Date.now());
     });
+    navigate("../login", { replace: true });
   };
 
   return (
@@ -67,7 +87,9 @@ const HeaderDetails = () => {
       <header>
         <div className="container-main">
           <Link to="../login" className="link-header">
-            <h1 className="title">Shopty</h1>
+            <div className="logo">
+              <h1 className="title">Shopty</h1>
+            </div>
           </Link>
           <div className="container">
             <Formik
@@ -92,52 +114,40 @@ const HeaderDetails = () => {
             <i class="bx bx-search icon"></i>
           </div>
 
-          <ul class="dropdown">
-            {/* <Link to="/" className="link-header">
-              Inicio
-            </Link> */}
-            <li>
-              <div>Categorías</div>
-              <ul>
-                <Link to="../Remeras" className="link-header-drop">
-                  <li>Remeras</li>
-                </Link>
-                <Link to="../Pantalones" className="link-header-drop">
-                  <li>Pantalones</li>
-                </Link>
-                <li>
-                  <Link to="../Hombre" className="link-header-drop">
-                    <div>Hombre</div>
-                  </Link>
-                  <ul>
-                    <li className="items-header">Remeras</li>
-                    <li>Pantalones</li>
-                    <li>Buzos</li>
-                    <li>Zapatillas</li>
-                  </ul>
+          <nav>
+            {(toggleMenu || screenWidth > 500) && (
+              <ul class="dropdown">
+                {/* <Link to="/" className="link-header">
+            Inicio
+          </Link> */}
+                <li className="items-nav">
+                  Categorías
+                  {/* <ul>
+              <Link to="../Remeras" className="link-header-drop">
+                <li>Remeras</li>
+              </Link>
+              <Link to="../Pantalones" className="link-header-drop">
+                <li>Pantalones</li>
+              </Link>
+              <Link to="../Hombre" className="link-header-drop">
+                <li>Hombre</li>
+              </Link>
+              <Link to="../Mujer" className="link-header-drop">
+                <li>Mujer</li>
+              </Link>
+              <Link to="../Invierno" className="link-header-drop">
+                <li>Moda Invierno</li>
+              </Link>
+              <Link to="../Verano" className="link-header-drop">
+                <li>Moda Verano</li>
+              </Link>
+            </ul> */}
                 </li>
-                <li>
-                  <Link to="../Mujer" className="link-header-drop">
-                    <div>Mujer</div>
-                  </Link>
-                  <ul>
-                    <li>Remeras</li>
-                    <li>Pantalones</li>
-                    <li>Buzos</li>
-                    <li>Zapatillas</li>
-                  </ul>
-                </li>
-                <Link to="../Invierno" className="link-header-drop">
-                  <li>Moda Invierno</li>
-                </Link>
-                <Link to="../Verano" className="link-header-drop">
-                  <li>Moda Verano</li>
-                </Link>
+                <li className="items-nav">Ofertas</li>
+                <li className="items-nav">Ayuda</li>
               </ul>
-            </li>
-            <li>Ofertas</li>
-            <li>Ayuda</li>
-          </ul>
+            )}
+          </nav>
 
           <ul className="dropdown-user">
             <li>
@@ -153,18 +163,15 @@ const HeaderDetails = () => {
                 <Link className="link-user" to="../help">
                   <li>Ayuda</li>
                 </Link>
+                <Button onClick={logoutHandler} variant="outlined">
+                  Salir
+                </Button>
               </ul>
             </li>
           </ul>
-          <div className="user-actions">
-            <Button onClick={logoutHandler} variant="outlined">
-              Salir
-            </Button>
-            {/* <Button text="Refetch" intent="primary" onClick={refetchHandler} /> */}
-          </div>
           <div className="carrito">
             <button class="snipcart-checkout link-carro">
-              <i class="bx bx-cart-alt"></i>
+              <i class="bx bxs-shopping-bag"></i>
             </button>
           </div>
         </div>
