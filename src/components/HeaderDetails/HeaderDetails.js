@@ -117,32 +117,7 @@ const HeaderDetails = () => {
           <nav>
             {(toggleMenu || screenWidth > 500) && (
               <ul class="dropdown">
-                {/* <Link to="/" className="link-header">
-            Inicio
-          </Link> */}
-                <li className="items-nav">
-                  Categorías
-                  {/* <ul>
-              <Link to="../Remeras" className="link-header-drop">
-                <li>Remeras</li>
-              </Link>
-              <Link to="../Pantalones" className="link-header-drop">
-                <li>Pantalones</li>
-              </Link>
-              <Link to="../Hombre" className="link-header-drop">
-                <li>Hombre</li>
-              </Link>
-              <Link to="../Mujer" className="link-header-drop">
-                <li>Mujer</li>
-              </Link>
-              <Link to="../Invierno" className="link-header-drop">
-                <li>Moda Invierno</li>
-              </Link>
-              <Link to="../Verano" className="link-header-drop">
-                <li>Moda Verano</li>
-              </Link>
-            </ul> */}
-                </li>
+                <li className="items-nav"><a href="#categorias" className="link-header">Categorías</a></li>
                 <li className="items-nav">Ofertas</li>
                 <li className="items-nav">Ayuda</li>
               </ul>

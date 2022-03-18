@@ -29,7 +29,7 @@ ReactDOM.render(
   <UserProvider>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<PageLogin />} />
         <Route path="add_product" element={<AddProduct />} />
         <Route path="get_product" element={<GetProducts />} />

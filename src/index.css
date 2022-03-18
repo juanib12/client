@@ -175,3 +175,18 @@ body {
     left: -60px;
   }
 }
+
+@media screen and (max-width: 400px){
+  .dropdown-user{
+    position: relative;
+    left: 50px;
+  }
+  .dropdown-user i{
+    left: 110px;
+    position: absolute;
+  }
+  .carrito{
+    position: relative;
+    left: -40px;
+  }
+}

@@ -138,3 +138,40 @@
     right: 130px;
   }
 }
+
+@media screen and (max-width: 400px){
+  .container--footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+  }
+  .center-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -250px;
+  }
+  .links-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link-follow{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 100px;
+  }
+  .link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 100px;
+  }
+}

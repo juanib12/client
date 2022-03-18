@@ -293,3 +293,39 @@ header input {
     left: -20px;
   }
 }
+
+
+@media screen and (max-width: 400px) {
+  .dropdown {
+    display: none;
+    max-width: 320px;
+  }
+  .items-nav:nth-child(1) {
+    display: none;
+  }
+  .items-nav {
+    display: none;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .title{
+    position: relative;
+    right: 50px;
+  }
+  header input{
+    position: relative;
+    display: none;
+  }
+  .container{
+    display: none;
+  }
+  header{
+    position: relative;
+    width: 512px;
+  }
+  .container-log{
+    position: relative;
+    left: 70px;
+  }
+}
