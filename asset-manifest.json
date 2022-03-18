@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/client/static/css/main.5a32701d.css",
+    "main.js": "/client/static/js/main.65527e21.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/client/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/mizuno.png": "/client/static/media/mizuno.6b1157b12c6f21ff8168.png",
+    "static/media/icons-20.eot": "/client/static/media/icons-20.cde033c5d3f24283f757.eot",
+    "static/media/icons-20.woff": "/client/static/media/icons-20.1ef633d3a28d0986f63e.woff",
+    "static/media/icons-20.ttf": "/client/static/media/icons-20.57b3e708b232fdcb64f9.ttf",
+    "static/media/icons-16.eot": "/client/static/media/icons-16.2368f88a078780d80145.eot",
+    "static/media/icons-16.woff": "/client/static/media/icons-16.1645f50fb7f7c109f64e.woff",
+    "static/media/icons-16.ttf": "/client/static/media/icons-16.13933033991f62d6bb64.ttf",
+    "static/media/adidas.png": "/client/static/media/adidas.83df8153294f9137d308.png",
+    "static/media/error.png": "/client/static/media/error.09f8f61a59f7e3cc07a4.png",
+    "static/media/converse.png": "/client/static/media/converse.a7259ba4c9180993edb0.png",
+    "static/media/reebok.png": "/client/static/media/reebok.6c127c58b7ef4ba7cb9a.png",
+    "static/media/descubri.svg": "/client/static/media/descubri.03ebc672bf035e616105d1bbe7ac77ea.svg",
+    "static/media/nike.png": "/client/static/media/nike.d6bd7ec519e32c74366f.png",
+    "static/media/puma.png": "/client/static/media/puma.67bd32c5710c46e6caeb.png",
+    "static/media/newbalance.png": "/client/static/media/newbalance.0ab6c23f06e50d2829e9.png",
+    "static/media/ofertas.svg": "/client/static/media/ofertas.7c7540f2719e4e8982103ecd6d2399de.svg",
+    "index.html": "/client/index.html",
+    "main.5a32701d.css.map": "/client/static/css/main.5a32701d.css.map",
+    "main.65527e21.js.map": "/client/static/js/main.65527e21.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/client/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a32701d.css",
+    "static/js/main.65527e21.js"
+  ]
+}
