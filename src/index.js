@@ -5,7 +5,6 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddProduct from "./components/AddProduct/AddProduct";
 import GetProducts from "./components/GetProducts/GetProducts";
-import AppNuevo from "./AppNuevo";
 import { UserProvider } from "./components/context/UserContext";
 import PageLogin from "./components/PageLogin/PageLogin";
 import MyAccount from "./components/MyAccount/MyAccount";
@@ -29,7 +28,7 @@ ReactDOM.render(
   <UserProvider>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<PageLogin />} />
         <Route path="add_product" element={<AddProduct />} />
         <Route path="get_product" element={<GetProducts />} />
